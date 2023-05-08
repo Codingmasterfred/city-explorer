@@ -61,7 +61,7 @@ function GetLocationData() {
                     </Card.Text>
                     {<img id="Map" src={ImageView} style={{display: ImageView ? "block" : "none" , width: "100%"}} ></img>}
                 </Card.Body>
-            </Card>
+            </Card> 
         </div >
 
     )

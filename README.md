@@ -35,12 +35,3 @@ Start time: __11:24___
 Finish time: _11:28____
 
 
-Name of feature: _______________________________
-
-Estimate of time needed to complete: ____
-
-Start time: _____
-
-Finish time: _____
-
-Actual time needed to complete: _____

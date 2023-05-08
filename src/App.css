@@ -1,5 +1,10 @@
+
+body{
+  background-color: #61dafb;
+}
 .App {
   text-align: center;
+  background-color: #61dafb;
 }
 
 .App-logo {
@@ -40,3 +45,18 @@
 flex-direction: column;
 justify-content: center;
 align-items: center;}
+
+#LocationDiv{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 100px;
+
+}
+
+
+
+#Map{
+  width:400px;
+  height: 400px;
+}

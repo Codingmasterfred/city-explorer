@@ -51,7 +51,13 @@ align-items: center;}
   justify-content: center;
   align-items: center;
   column-gap: 100px;
+  column-gap: 20px;;
 
+}
+
+#table{
+  border:1px solid black;
+  width:200px;
 }
 
 

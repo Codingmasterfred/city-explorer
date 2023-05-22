@@ -48,21 +48,32 @@ align-items: center;}
 
 #LocationDiv{
   display:flex;
-  justify-content: center;
-  align-items: center;
-  column-gap: 100px;
-  column-gap: 20px;;
-
-}
-
-#table{
+  flex-direction: column;
+  margin-left:0px;
   border:1px solid black;
-  width:200px;
+  height:97vh;
+  width:100%
+
 }
 
+#Differentapi{
+  height:89%;
+  border:1px solid black;
+  display: flex;
+}
+
+#Weatherbit_Movieapi{
+  border:1px solid black;
+  width:830px;
+  display:flex;
+  justify-content: center;
+
+
+}
 
 
 #Map{
+
   width:400px;
-  height: 400px;
+  height:350px;
 }

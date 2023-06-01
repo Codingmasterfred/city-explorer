@@ -49,25 +49,26 @@ align-items: center;}
 #LocationDiv{
   display:flex;
   flex-direction: column;
-  margin-left:0px;
-  border:1px solid black;
-  height:97vh;
+  border:10px solid blue;
+  height:130vh;
   width:100%
+  /* page */
 
 }
 
 #Differentapi{
-  height:89%;
-  border:1px solid black;
+  height:initial;
+  border:10px solid rgb(246, 6, 6);
   display: flex;
+  /* api area */
 }
 
 #Weatherbit_Movieapi{
-  border:1px solid black;
+  border:10px solid black;
   width:830px;
   display:flex;
-  justify-content: center;
-
+  flex-direction: column;
+/* weather api */
 
 }
 
@@ -75,5 +76,14 @@ align-items: center;}
 #Map{
 
   width:400px;
-  height:350px;
+  height:434px;
+}
+
+#overTable{
+  border:10px solid rgb(10, 246, 6);
+  /* weatherdata div*/
+}
+
+#OverBoth{
+  border:10px solid rgb(246, 6, 186);
 }

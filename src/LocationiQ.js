@@ -16,7 +16,7 @@ function GetLocationData() {
     // is used to puts the error message into an object data type 
     const [displayweather, displayweatherfunction] = useState([])
 
-    const [movieTitle, movieTitleFunction] = useState("")
+    const [movieTitle, movieTitleFunction] = useState([])
 
 
     let FetchData = async (event) => {
@@ -64,7 +64,7 @@ function GetLocationData() {
             // await with the async function wait for the promise to return before continuing rendering the rest of the code 
             //axios.get() method is used to get 
             console.log("MoviesApi", resultOfMoviesData)
-            movieTitleFunction(resultOfMoviesData)
+            movieTitleFunction(resultOfMoviesData.data)
 
 
 
@@ -85,16 +85,16 @@ function GetLocationData() {
     }
     return (
         <div id="LocationDiv">
-            <Form >
+            <Form style={{alignSelf:"center"}}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
-                    <Form.Label>Email address</Form.Label>
+                    <Form.Label style={{fontSize:"30px"}} >Search</Form.Label>
                     <Form.Control style={{ textAlign: "center", margin: "10px" }} onChange={onchange} type="text" placeholder="Type A Location" />
                     {/* form.control asts as a input and as the input is typing it changes */}
                     <button onClick={FetchData}>Explore!!</button>
                 </Form.Group>
                 {/* in order to recieve the data you will have to click this button */}
             </Form>
-            <h1 style={{position:"fixed", top:"-20px", right:"210px" }}>MOVIES</h1>
+            
             <div id="Differentapi">
                 <Card style={{ width: '450px', height: '200px' }} id='card'>
                     <Card.Body style={{ backgroundColor: '#2E7D32' }}>
@@ -108,7 +108,9 @@ function GetLocationData() {
                     </Card.Body>
                 </Card>
                 {/* {console.log("display",displayweather)} */}
-                <div>{displayweather.map(arr => {
+                <div id="OverBoth">
+                <h1>Weather</h1>
+                <div id = "overTable">{displayweather.map(arr => {
                     return (<div id="Weatherbit_Movieapi">
                         <Table id="table" striped bordered hover size="sm">
                             <thead>
@@ -128,18 +130,23 @@ function GetLocationData() {
                                 </tr>
                             </tbody>
                         </Table>
-                        <div style={{ display: "grid", gridTemplateColumns: "auto auto", alignItems:"center" }}>
 
-                            {movieTitle.data.map(arr => {
-                                return (
-                                    <div>{arr.Title}</div>
-                                )
-                            })}
-                        </div>
                     </div>)
                 })}</div>
+                <h1>Movies</h1>
+
+                <div style={{ display: "grid", gridTemplateColumns: "auto auto", alignItems: "center" ,   border:"10px solid rgb(8, 6, 6)"}}> 
+                {/* moviedata div */}
+
+                    {movieTitle.map(arr => {
+                        return (
+                            <div>{arr.Title}</div>
+                        )
+                    })}
+                </div>
             </div>
         </div >
+        </div>
 
     )
 

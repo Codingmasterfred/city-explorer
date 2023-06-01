@@ -46,7 +46,7 @@ function GetLocationData() {
     let FetchData2 = async (response) => {
         // create a new async function named FetchData2
         try {
-            let result = await axios.get(`http://localhost:3001/weather?lat=${response.data[0].lat}&lon=${response.data[0].lon}`)
+            let result = await axios.get(`https://city-explorer-api-rqe0.onrender.com/weather?lat=${response.data[0].lat}&lon=${response.data[0].lon}`)
             // await with the async function wait for the promise to return before continuing rendering the rest of the code 
             //axios.get() method is used to get 
             console.log("Weatherbit", result)
@@ -61,7 +61,7 @@ function GetLocationData() {
     let FetchData3 = async () => {
         // create a new async function named FetchData2
         try {
-            let resultOfMoviesData = await axios.get(`http://localhost:3001/movies?query=${Change}`)
+            let resultOfMoviesData = await axios.get(`https://city-explorer-api-rqe0.onrender.com/movies?query=${Change}`)
             // await with the async function wait for the promise to return before continuing rendering the rest of the code 
             //axios.get() method is used to get 
             console.log("MoviesApi", resultOfMoviesData)

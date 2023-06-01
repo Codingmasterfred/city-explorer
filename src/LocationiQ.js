@@ -6,6 +6,7 @@ import { useState } from "react";
 // in order to use the differents states to make changes or updates
 import Card from "react-bootstrap/Card"
 import Table from 'react-bootstrap/Table';
+import "bootstrap/dist/css/bootstrap.min.css"
 
 function GetLocationData() {
     const [Change, ChangeFunction] = useState("")
